@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Portfólio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at 20% 30%, #1a1a2e, #0f0f1a);
+      color: white;
+      overflow: hidden;
+    }
+
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('Imagem WhatsApp 2025-10-16 às 23.47.01_7756930f.jpg') no-repeat center center/cover;
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    .login-box {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(20, 20, 30, 0.85);
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      width: 350px;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      background-color: #252542;
+      color: white;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    input:focus {
+      background-color: #2e2e5a;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(90deg, #ffffff, #dcdcdc);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .credenciais {
+      margin-top: 25px;
+      font-size: 0.9em;
+      color: #ccc;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .erro {
+      color: #ff4b4b;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <div class="login-box">
+    <h1>Portfólio</h1>
+    <div class="erro" id="erro">Nome de utilizador ou senha incorretos!</div>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="verificarLogin()">LOG IN</button>
+
+    <div class="credenciais">
+      <p><strong>Username:</strong> Kelvin Massinga</p>
+      <p><strong>Password:</strong> papaleguas7</p>
+    </div>
+  </div>
+
+  <script>
+    function verificarLogin() {
+      const user = document.getElementById("username").value.trim();
+      const pass = document.getElementById("password").value.trim();
+      const erro = document.getElementById("erro");
+
+      if (user === "Kelvin Massinga" && pass === "papaleguas7") {
+        window.location.href = "index.html"; // redireciona para a página inicial
+      } else {
+        erro.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #111111;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px auto;
+  background: #1d0219;  <--fundo azul escuro -->
+}
+
+.left {
+  width: 35%;
+  background: #111;
+  padding: 20px;
+}
+
+.left .profile img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.left h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.left p {
+  font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.bar {
+  width: 100%;
+  background: #333;
+  height: 8px;
+  border-radius: 5px;
+}
+
+.fill {
+  height: 8px;
+  background: #f05a9f;
+  border-radius: 5px;
+}
+
+.right {
+  width: 65%;
+  padding: 30px;
+}
+
+.right h1 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.right h1 span {
+  color: #fff;
+}
+
+.right h2 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.right section {
+  margin-bottom: 20px;
+}
+
+.right h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.right p, 
+.right li {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.idioma {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: radial-gradient(circle at top left, #5b2be0, transparent 50%),
+              radial-gradient(circle at bottom right, #e62b73, transparent 50%),
+              #111111; /* fundo preto base */
+  color: #fff;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* Bolhas decorativas */
+body::before,
+body::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+body::before {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  left: -100px;
+  background: rgba(91, 43, 224, 0.6);
+}
+
+body::after {
+  width: 500px;
+  height: 500px;
+  bottom: -150px;
+  right: -150px;
+  background: rgba(230, 43, 115, 0.6);
+}
+
+.left p i {
+  color: #f05a9f;   /* cor dos ícones (rosa da paleta) */
+  margin-right: 10px;
+  width: 20px;      /* alinhamento */
+  text-align: center;
+}
+
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.float-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s, background 0.3s;
+}
+
+/* Cores de cada botão */
+.float-btn.phone { background: #007bff; }     /* Azul */
+.float-btn.email { background: #6c63ff; }     /* Roxo */
+.float-btn.whatsapp { background: #25d366; }  /* Verde WhatsApp */
+.float-btn.behance { background: #053eff; }   /* Azul Behance */
+.float-btn.instagram { background: #e4405f; } /* Rosa Instagram */
+
+/* Efeito ao passar o mouse */
+.float-btn:hover {
+  transform: scale(1.15) rotate(5deg);
+  filter: brightness(1.2);
+}
+
+.print-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #6c63ff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 20px;
+  transition: 0.3s;
+}
+.print-btn i {
+  margin-right: 8px;
+}
+.print-btn:hover {
+  background: #e6007e;
+  transform: scale(1.05);
+}
+
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+  .print-btn, .floating-buttons {
+    display: none; /* Esconde botões na versão impressa */
+  }
+  .section {
+    box-shadow: none;
+    margin: 10px 0;
+    border-radius: 0;
+  }
+}
+
+.color-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #25d366; /* cor inicial (verde) */
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 20px;
+  transition: 0.3s;
+}
+.color-btn i {
+  margin-right: 8px;
+}
+.color-btn:hover {
+  background: #128c7e;
+  transform: scale(1.05);
+}

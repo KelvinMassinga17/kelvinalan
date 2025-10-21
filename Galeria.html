@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeria Multimédia</title>
+  <style>
+    /* --- Reset básico --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1f2c, #0d111a);
+      color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* --- Cabeçalho --- */
+    header {
+      text-align: center;
+      padding: 40px 20px 20px 20px;
+      border-bottom: 3px solid #7c3aed;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #7c3aed;
+      object-fit: cover;
+    }
+
+    .profile h2 {
+      font-size: 24px;
+      color: #f5f5f5;
+    }
+
+    /* --- Seções de card --- */
+    section.card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 12px;
+      margin: 40px 0;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    section.card h2 {
+      border-left: 5px solid #7c3aed;
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    .lead {
+      color: #ccc;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    audio, video {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+      outline: none;
+    }
+
+    figcaption {
+      font-size: 13px;
+      color: #aaa;
+      margin-top: 6px;
+    }
+
+    /* --- Galeria de imagens --- */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery figure {
+      width: 30%;
+      min-width: 200px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery figure img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .gallery figure:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 18px rgba(124, 58, 237, 0.4);
+    }
+
+    .caption {
+      font-size: 13px;
+      color: #ccc;
+      margin-top: 6px;
+    }
+
+    /* --- Iframe --- */
+    .iframe-section iframe {
+      width: 90%;
+      height: 400px;
+      border: 2px solid #7c3aed;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(124, 58, 237, 0.3);
+    }
+
+    /* --- Responsividade --- */
+    @media (max-width: 768px) {
+      .gallery figure {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery figure {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Cabeçalho -->
+    <header>
+      <h1>Galeria Multimédia</h1>
+      <div class="profile">
+        <img src="Imagem WhatsApp 2025-09-27 às 13.21.55_c1341728.jpg" alt="Foto de perfil">
+        <h2>Kelvin Alan Stélio Massinga</h2>
+      </div>
+    </header>
+
+    <!-- Áudio -->
+    <section class="card">
+      <h2>🎵 Reprodutor de Áudio</h2>
+      <p class="lead">Este bloco mostra um reprodutor de áudio incorporado com uma faixa musical de exemplo.</p>
+      <audio controls>
+        <source src="2Ficheiro de áudio WhatsApp 2025-09-27 às 13.07.03_a6b3e484.mp3" type="audio/mpeg">
+        O seu navegador não suporta o elemento de áudio.
+      </audio>
+      <figcaption>Legenda: “King Cizzy – Lisboa: 02:49”</figcaption>
+    </section>
+
+    <!-- Vídeo -->
+    <section class="card">
+      <h2>🎬 Reprodutor de Vídeo</h2>
+      <p class="lead">Um vídeo demonstrativo com um toque divertido.</p>
+      <video controls>
+        <source src="Vídeo WhatsApp 2025-09-27 às 13.04.37_4aa47e0b.mp4" type="video/mp4">
+        O seu navegador não suporta vídeo.
+      </video>
+      <figcaption>Legenda do vídeo: “Demonstração curta de um vídeo cómico do Titos.”</figcaption>
+    </section>
+
+    <!-- Galeria de imagens -->
+    <section class="card">
+      <h2>🖼️ Galeria de Imagens</h2>
+      <p class="lead">Seis imagens dos novos mantos de cada equipe para a temporada 25/26.</p>
+      <div class="gallery" aria-label="Galeria multimédia">
+        <figure>
+          <img src="IMG-20250927-WA0039.jpg" alt="Camiseta do Man City">
+          <div class="caption">Nova temporada – Nova Identidade.</div>
+        </figure>
+        <figure>
+          <img src="IMG-20250927-WA0040.jpg" alt="Camiseta do NewCastle">
+          <div class="caption">De volta às origens e às cores clássicas.</div>
+        </figure>
+        <figure>
+          <img src="IMG-20250927-WA0041.jpg" alt="Camiseta da Juventus">
+          <div class="caption">Um azul ciano inspirado na água e energia.</div>
+        </figure>
+        <figure>
+          <img src="IMG-20250927-WA0042.jpg" alt="Camiseta do Borussia M.">
+          <div class="caption">Dourado aceso com toque de realeza.</div>
+        </figure>
+        <figure>
+          <img src="IMG-20250927-WA0043.jpg" alt="Camiseta do Arsenal">
+          <div class="caption">O Arsenal criou um manto digno dos deuses.</div>
+        </figure>
+        <figure>
+          <img src="IMG-20250927-WA0044.jpg" alt="Camiseta da Roma">
+          <div class="caption">Uma camisa clássica e incrível.</div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Iframe -->
+    <section class="card iframe-section">
+      <h2>🌐 Iframe — Site Integrado</h2>
+      <p class="lead">Aqui está um iframe que mostra outra página dentro desta galeria
+        (podes substituir o link abaixo por outro site).</p>
+      <iframe src="https://www.wikipedia.org/" title="Exemplo de Iframe"></iframe>
+    </section>
+
+    <a href="index.html" class="voltar">← Voltar à Página Inicial</a>
+    
+  </div>
+</body>
+</html>
